@@ -1,9 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bamnw74wsnkkc"]
+[gd_scene load_steps=2 format=3 uid="uid://ut57jkthuuvd"]
 
-[ext_resource type="Script" path="res://scripts/killzone.gd" id="1_as8th"]
+[ext_resource type="Script" path="res://scripts/enemyHit.gd" id="1_4kr70"]
 
 [node name="enemyHit" type="Area2D"]
-collision_mask = 2
-script = ExtResource("1_as8th")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+script = ExtResource("1_4kr70")

@@ -1,4 +1,10 @@
 extends Area2D
 
+@onready var timer = $Timer
+
 func _on_body_entered(body):
-	print("You've been hit!")
+	print("You're dead!")
+	timer.start()
+
+func _on_timer_timeout():
+	get_tree().reload_current_scene()

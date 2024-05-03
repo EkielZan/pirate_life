@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/crabby.gd" id="1_p7v8t"]
 [ext_resource type="Texture2D" uid="uid://cljtqysswk7ga" path="res://sprites/ennemies/crabby/crabby-attack-ready.png" id="2_fr35s"]
 [ext_resource type="Texture2D" uid="uid://endeu0kba3bq" path="res://sprites/ennemies/crabby/crabby-hit.png" id="3_3txiq"]
-[ext_resource type="PackedScene" uid="uid://bamnw74wsnkkc" path="res://scenes/enemyHit.tscn" id="6_njohb"]
+[ext_resource type="PackedScene" uid="uid://ut57jkthuuvd" path="res://scenes/enemyHit.tscn" id="6_njohb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3kko0"]
 atlas = ExtResource("1_ku2pe")
