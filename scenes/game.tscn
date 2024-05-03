@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://6k7s8nfb5elc"]
+[gd_scene load_steps=18 format=3 uid="uid://6k7s8nfb5elc"]
 
 [ext_resource type="Texture2D" uid="uid://d35fj6em7nior" path="res://sprites/landscape/BG Image.png" id="1_01boo"]
 [ext_resource type="PackedScene" uid="uid://tro7fh56r3hc" path="res://scenes/player.tscn" id="1_rf0la"]
+[ext_resource type="PackedScene" uid="uid://dg747777c3q24" path="res://scenes/game_manager.tscn" id="1_vkb4w"]
 [ext_resource type="Texture2D" uid="uid://b8ri6gl6jh4fh" path="res://sprites/landscape/Terrain (32x32).png" id="2_vlphs"]
 [ext_resource type="Texture2D" uid="uid://ca2sbvwi7ycj7" path="res://sprites/landscape/Additional Sky.png" id="3_0q8k7"]
 [ext_resource type="Texture2D" uid="uid://col4c6kw4fp1g" path="res://sprites/landscape/Additional Water.png" id="4_flkd1"]
@@ -1357,6 +1358,8 @@ sources/3 = SubResource("TileSetAtlasSource_6se6a")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s2bqj"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Game Manager" parent="." instance=ExtResource("1_vkb4w")]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
