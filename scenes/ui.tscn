@@ -67,9 +67,9 @@ layer_0/tile_data = PackedInt32Array(0, 2, 0, 1, 65538, 0, 2, 131074, 0, 3, 1966
 
 [node name="Label" type="Label" parent="TileMap"]
 offset_left = 36.0
-offset_top = 42.0
+offset_top = 60.0
 offset_right = 109.0
-offset_bottom = 94.0
+offset_bottom = 83.0
 text = "LIFE : 5"
 vertical_alignment = 1
 
