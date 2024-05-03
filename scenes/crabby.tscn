@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bu785c21akm3m" path="res://sprites/ennemies/crabby/crabby-attack.png" id="1_ku2pe"]
 [ext_resource type="Script" path="res://scripts/crabby.gd" id="1_p7v8t"]
 [ext_resource type="Texture2D" uid="uid://cljtqysswk7ga" path="res://sprites/ennemies/crabby/crabby-attack-ready.png" id="2_fr35s"]
-[ext_resource type="PackedScene" uid="uid://bj148etn8qlwg" path="res://scenes/killzone.tscn" id="2_jdcv4"]
 [ext_resource type="Texture2D" uid="uid://endeu0kba3bq" path="res://sprites/ennemies/crabby/crabby-hit.png" id="3_3txiq"]
+[ext_resource type="PackedScene" uid="uid://bamnw74wsnkkc" path="res://scenes/enemyHit.tscn" id="6_njohb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3kko0"]
 atlas = ExtResource("1_ku2pe")
@@ -181,9 +181,9 @@ sprite_frames = SubResource("SpriteFrames_u73nu")
 animation = &"attack"
 autoplay = "idle"
 
-[node name="killzone" parent="." instance=ExtResource("2_jdcv4")]
+[node name="enemyHit" parent="." instance=ExtResource("6_njohb")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyHit"]
 position = Vector2(1, 2)
 shape = SubResource("CircleShape2D_bth5n")
 
