@@ -7,6 +7,7 @@ var anim = ""
 var has_sword = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var timer_hit = $Timer
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -44,7 +45,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 func hit(hitDirection,delta):
-	animated_sprite.play("hit")
 	velocity.x += hitDirection * 90
+	if timer_hit.is_stopped():
+		animated_sprite.play("hit")
+		print("You've been hit!")
+		timer_hit.start()
 func pickupSword():
 	has_sword = true

@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://btd8pmn6e57ac"]
+[gd_scene load_steps=8 format=3 uid="uid://btd8pmn6e57ac"]
 
 [ext_resource type="Texture2D" uid="uid://bxomalg4vrd2f" path="res://sprites/ui/prefabs/5.png" id="1_qyxh7"]
+[ext_resource type="Texture2D" uid="uid://cluvew50ewmea" path="res://sprites/ui/lifebars/1.png" id="2_y4700"]
+[ext_resource type="Texture2D" uid="uid://c747ofxai16lx" path="res://sprites/ui/lifebars/3.png" id="3_1cn8f"]
+[ext_resource type="Texture2D" uid="uid://3xedlnpkmug2" path="res://sprites/ui/lifebars/4.png" id="4_7jebp"]
+[ext_resource type="Texture2D" uid="uid://byyw8t0rco3f0" path="res://sprites/ui/1.png" id="5_2pktp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfe5j"]
 texture = ExtResource("1_qyxh7")
@@ -49,6 +53,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -60,9 +66,38 @@ format = 2
 layer_0/tile_data = PackedInt32Array(0, 2, 0, 1, 65538, 0, 2, 131074, 0, 3, 196610, 0, 4, 262146, 0, 9, 327682, 0, 5, 65538, 0, 6, 131074, 0, 7, 196610, 0, 8, 262146, 0, 65545, 327682, 3, 131081, 327682, 4, 196617, 327682, 5, 65536, 2, 3, 131072, 2, 4, 196608, 2, 5, 196609, 65538, 5, 196610, 131074, 5, 196611, 196610, 5, 196612, 262146, 5, 196613, 65538, 5, 196614, 131074, 5, 196615, 196610, 5, 196616, 262146, 5, 65537, 65538, 1, 65538, 131074, 1, 131075, 196610, 2, 131076, 262146, 2, 131077, 65538, 2, 131078, 131074, 2, 131079, 196610, 2, 131073, 65538, 2, 131074, 131074, 2, 65539, 196610, 1, 65540, 262146, 1, 65541, 65538, 1, 65542, 131074, 1, 65543, 196610, 1, 65544, 262146, 1, 131080, 262146, 2)
 
 [node name="Label" type="Label" parent="TileMap"]
-offset_left = 16.0
-offset_top = 6.0
-offset_right = 89.0
-offset_bottom = 58.0
+offset_left = 36.0
+offset_top = 42.0
+offset_right = 109.0
+offset_bottom = 94.0
 text = "LIFE : 5"
 vertical_alignment = 1
+
+[node name="lifebar" type="Node" parent="."]
+
+[node name="start" type="Sprite2D" parent="lifebar"]
+texture_filter = 1
+position = Vector2(51, 52)
+texture = ExtResource("2_y4700")
+
+[node name="2nd" type="Sprite2D" parent="lifebar"]
+texture_filter = 1
+position = Vector2(83, 52)
+texture = ExtResource("3_1cn8f")
+
+[node name="3rd" type="Sprite2D" parent="lifebar"]
+texture_filter = 1
+position = Vector2(115, 52)
+texture = ExtResource("3_1cn8f")
+
+[node name="end" type="Sprite2D" parent="lifebar"]
+texture_filter = 1
+position = Vector2(147, 52)
+texture = ExtResource("4_7jebp")
+
+[node name="lifescale" type="Sprite2D" parent="lifebar"]
+z_index = 1
+position = Vector2(52, 51)
+scale = Vector2(3.35, 1)
+texture = ExtResource("5_2pktp")
+offset = Vector2(16, 0)
