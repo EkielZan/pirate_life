@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ka2q7uf3bpve"]
+
+[node name="UICanvas" type="CanvasLayer"]

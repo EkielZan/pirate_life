@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bj148etn8qlwg" path="res://scenes/killzone.tscn" id="6_mtyc1"]
 [ext_resource type="PackedScene" uid="uid://dmm7gja7rmjqo" path="res://scenes/crabby.tscn" id="7_7j0es"]
 [ext_resource type="PackedScene" uid="uid://cn38uk1dterwk" path="res://scenes/sword.tscn" id="8_f3fae"]
-[ext_resource type="PackedScene" uid="uid://bikowfrrk40uj" path="res://scenes/ui.tscn" id="9_b5gs7"]
-[ext_resource type="PackedScene" uid="uid://o2ussnge6p3f" path="res://scenes/ui_port.tscn" id="9_fo2co"]
+[ext_resource type="PackedScene" uid="uid://btd8pmn6e57ac" path="res://scenes/ui.tscn" id="9_b5gs7"]
+[ext_resource type="PackedScene" uid="uid://ka2q7uf3bpve" path="res://scenes/uicanvas.tscn" id="9_fo2co"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lhoj0"]
 texture = ExtResource("2_vlphs")
@@ -1405,6 +1405,6 @@ position = Vector2(169, -60)
 [node name="Sword" parent="." instance=ExtResource("8_f3fae")]
 position = Vector2(-136, -20)
 
-[node name="UIPort" parent="." instance=ExtResource("9_fo2co")]
+[node name="UICanvas" parent="." instance=ExtResource("9_fo2co")]
 
-[node name="UI" parent="UIPort" instance=ExtResource("9_b5gs7")]
+[node name="UI" parent="UICanvas" instance=ExtResource("9_b5gs7")]
