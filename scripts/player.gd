@@ -48,13 +48,12 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func hit(hitDirection,delta):
+func hit(hitDirection):
 	velocity.x = 750 * hitDirection
 	velocity.y = -80
 	if timer.is_stopped():
 		timer.start()
 		game_manager.remove_life()
-		var collision = get_slide_collision(0)
 		animated_sprite.play("hit")
 		is_hit=false
 	else:

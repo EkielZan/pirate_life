@@ -33,7 +33,7 @@ func _process(delta):
 		animated_sprite.play("attack")
 		var coll = attack_front.get_collider()
 		if coll.has_method("hit"):
-			coll.hit(direction,delta)
+			coll.hit(direction)
 	# change direction of the sprite and raycast
 	if direction == 1:
 		animated_sprite.flip_h =  true

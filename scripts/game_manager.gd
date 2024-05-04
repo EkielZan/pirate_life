@@ -10,8 +10,8 @@ func _ready():
 @onready var player = $"../Player"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+	#pass
 
 func get_life() -> int :
 	return life
@@ -22,5 +22,5 @@ func remove_life():
 	lifescale.scale.x = lifescale.scale.x - 0.7
 	life_label.text = "Life: " + str(life) 
 	if life == 0:
-		player.play
+		#player.animated_sprite.play("dead")
 		get_tree().reload_current_scene()

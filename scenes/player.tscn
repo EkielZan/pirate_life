@@ -303,7 +303,7 @@ script = ExtResource("1_4qhde")
 texture_filter = 1
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_osrcu")
-animation = &"jump_ws"
+animation = &"ground"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
