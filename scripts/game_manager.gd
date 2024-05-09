@@ -8,6 +8,7 @@ func _ready():
 @onready var lifescale = $"../UICanvas/UI/lifebar/lifescale"
 @onready var life_label = $"../UICanvas/UI/TileMap/Label"
 @onready var player = $"../Player"
+@onready var timer_before_dead = $Timer
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -18,9 +19,8 @@ func get_life() -> int :
 	
 func remove_life():
 	life -= 1
-	print(lifescale.scale.x)
 	lifescale.scale.x = lifescale.scale.x - 0.7
 	life_label.text = "Life: " + str(life) 
 	if life == 0:
-		#player.animated_sprite.play("dead")
+		player.animated_sprite.play("dead")
 		get_tree().reload_current_scene()
